@@ -48,12 +48,12 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com > ~/.ssh/known_hosts
           chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-          git config --local user.email "vbenadmin@163.com"
-          git config --local user.name "vbenAdmin"
+          git config --local user.email "virola@yeah.net"
+          git config --local user.name "virola"
 
-      - name: Delete gh-pages branch
-        run: |
-          git push origin --delete gh-pages
+      # - name: Delete gh-pages branch
+      #   run: |
+      #     git push origin --delete gh-pages
 
       - name: Build
         run: |
