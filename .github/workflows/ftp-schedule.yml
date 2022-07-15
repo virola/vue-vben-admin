@@ -1,13 +1,13 @@
 name: schedule-push-to-ftp
 
-# # Timed deployment project
-# on:
-#   push:
-#   schedule:
-#     - cron: '0 20 * * *'
+# Timed deployment project
+on:
+  schedule:
+    - cron: '0 20 * * *'
 
 jobs:
   schedule-push-to-ftp:
+    if: "contains(github.event.head_commit.message, '[ftp]')"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
